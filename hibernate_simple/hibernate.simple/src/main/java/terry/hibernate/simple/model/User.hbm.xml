@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014. 5. 16 ???? 12:36:25 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="terry.hibernate.simple.model.User" table="USER">
+        <id name="email" type="java.lang.String">
+            <column name="EMAIL" />
+            <generator class="assigned" />
+        </id>
+        <property name="tenant_id" type="java.lang.String">
+            <column name="TENANT_ID" />
+        </property>
+         <property name="LastName" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="FirstName" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+        <property name="company" type="java.lang.String">
+            <column name="COMPANY" />
+        </property>
+    </class>
+</hibernate-mapping>

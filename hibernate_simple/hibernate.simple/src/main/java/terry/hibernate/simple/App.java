@@ -23,8 +23,15 @@ public class App
         session.beginTransaction();
         session.save(user);
         session.getTransaction().commit();
+        System.out.println("Insert completed");
+
+        session.beginTransaction();
+        User myuser = (User)session.get(User.class, "cath@gmail.com");
+        System.out.println("user name:"+myuser.getFirstName());
+        myuser.setFirstName("Cath");
+        session.getTransaction().commit();
+        
         session.close();
         sessionFactory.close();
-        System.out.println("Insert completed");
     }
 }

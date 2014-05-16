@@ -7,8 +7,10 @@
   <property name="hibernate.connection.password">asdf1234</property>
   <property name="hibernate.connection.url">jdbc:mysql://localhost:3306</property>
   <property name="hibernate.connection.username">terry</property>
-  <property name="hibernate.default_schema">mydb</property>
+  <property name="hibernate.default_schema">terry</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-  <mapping  resource="terry/hibernate/simple/model/User.hbm.xml"/>
+  <property name="hibernate.hbm2ddl.auto">create</property>
+  <property name="hibernate.show_sql">true</property>
+  <mapping resource="terry/hibernate/simple/model/User.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>
